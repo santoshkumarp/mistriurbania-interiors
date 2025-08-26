@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Consultation | Urbanian Mistri</title>
+    <link rel="stylesheet" href="icons/css/all.css">
+    <link rel="stylesheet" href="common-style.css">
+    <link rel="stylesheet" href="book-style.css">
+    <link rel="shortcut icon" href="MistriUrbania/source/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<script src="book-code.js"></script>
+
+<div class="banner">
+    <div class="navbar">
+        <img onclick="btn('index.html');" src="source/logo.png" class="logo">
+        <ul>
+            <li><a href="design.html">Design ideas</a></li>
+            <li><a href="how.html">How It Works?</a></li>
+            <li><a href="visit.html">Visit Us</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>TALK TO A DESIGNER</h1>
+    </div>
+</div>
+
+<div class="m1">
+    <div class="d1">
+        <div class="final">
+            <div class="form" id="frm">
+                <form action="https://docs.google.com/forms/d/e/1FAIpQLSeG7fuyspiQR01ogMlC1eKk5tDBwz_ww33Cp8vJu22HL0I_zg/formResponse"
+                      method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+
+                    <!-- Name -->
+                    <input class="inp" id="nam" type="text" name="entry.2005620554" autocomplete="off" required>
+                    <label class="lab" id="lab_nam" for="nam">
+                        <span class="spn" id="content-name">Name</span>
+                    </label>
+
+                    <!-- Email -->
+                    <input class="inp" id="email" type="email" name="entry.1045781291" autocomplete="off" required>
+                    <label class="lab" id="lab_email" for="email">
+                        <span class="spn" id="content-email">Email</span>
+                    </label>
+
+                    <!-- Phone -->
+                    <input class="inp" id="num" type="text" name="entry.1166974658" autocomplete="off" required>
+                    <label class="lab" id="lab_num" for="num">
+                        <span class="spn" id="content-num">Mobile Number</span>
+                    </label>
+                    <!-- Looking For -->
+                    <input class="inp" id="looking" type="text" name="entry.839337160" placeholder=" " required>
+                    <label class="lab" for="looking"><span>Looking For...</span></label>
+
+                    <!-- WhatsApp Checkbox -->
+                    <div>
+                        <input type="checkbox" id="whatsapp" name="entry.1961355601" value="Yes">
+                        <label id="lab_chk" for="whatsapp">Send me updates on WhatsApp</label>
+                    </div>
+
+                    <!-- Submit -->
+                    <button type="submit" id="sub-btn">BOOK ONLINE CONSULTATION</button>
+                </form>
+
+                <!-- Hidden iframe -->
+                <iframe name="hidden_iframe" style="display:none;" onload="if(submitted) showThankYou();"></iframe>
+
+            </div>
+
+            <div>
+                <h2 id="subm">Your details are submitted. <br> Our staff will contact you soon.</h2>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

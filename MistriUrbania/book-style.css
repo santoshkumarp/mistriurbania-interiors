@@ -1,0 +1,93 @@
+/* ======= HERO / BANNER ======= */
+.content{ top:30%; }
+.banner{
+    background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(source/book-background.jpg);
+}
+
+/* ======= SECTION LAYOUTS ======= */
+.m1{ width:100%; height:475px; text-align:center; }
+.d1{ width:850px; margin:auto; position:relative; }
+.final{
+    position:absolute; background:#fff; border-radius:10px; border:1px solid #7c7c7c;
+    box-shadow:0 1px 6px rgb(0 0 0 / 25%), 0 1px 4px rgb(0 0 0 / 25%);
+    width:inherit; height:700px; top:-350px;
+}
+#subm{
+    color:#eb595f; font-size:60px; font-weight:bold; margin:215px 0 0 0; display:none;
+}
+
+/* ======= FORM WRAPPER ======= */
+.form{
+    position:relative; width:750px; height:600px; margin:auto; margin-top:50px;
+    overflow:hidden; text-align:center;
+}
+
+/* ======= INPUTS (FLOATING LABELS) ======= */
+/* Bigger padding-top ensures typed text never overlaps default label position */
+.inp{
+    width:100%; color:#000; border:none; outline:none;
+    font-size:50px; font-weight:bold; text-align:left;
+    padding:30px 0 8px;              /* added */
+    background:transparent;
+}
+
+/* Spacing between fields */
+#nam{ margin-top:27px; }
+#email{ margin-top:27px; }
+#num{ margin-top:27px; }
+
+/* Label bar that sits over each input */
+.lab{
+    position:absolute; left:0; width:100%; pointer-events:none;
+    border-bottom:1px solid #eb595f;
+    font-size:35px; color:#7c7c7c;
+}
+
+/* Position each label bar along the form stack */
+#lab_nam{ top:100px; }
+#lab_email{ top:205px; }
+#lab_num{ top:305px; }
+
+/* Animated underline on focus/valid */
+.lab::after{
+    content:""; position:absolute; left:0; bottom:-1px; height:100%; width:100%;
+    border-bottom:3px solid #eb595f; transform:translateX(-100%); transition:transform 1s ease;
+}
+
+/* The label text inside the bar */
+.spn{
+    position:absolute; bottom:5px; left:0; transition:all .3s ease;
+}
+
+/* Float label on focus + when valid (non-empty & valid type) */
+#nam:focus + #lab_nam #content-name,
+#nam:valid + #lab_nam #content-name{ transform:translateY(-120%); font-size:30px; color:#eb595f; font-weight:bold; }
+#nam:focus + #lab_nam::after, #nam:valid + #lab_nam::after{ transform:translateX(0%); }
+
+#email:focus + #lab_email #content-email,
+#email:valid + #lab_email #content-email{ transform:translateY(-120%); font-size:30px; color:#eb595f; font-weight:bold; }
+#email:focus + #lab_email::after, #email:valid + #lab_email::after{ transform:translateX(0%); }
+
+#num:focus + #lab_num #content-num,
+#num:valid + #lab_num #content-num{ transform:translateY(-120%); font-size:30px; color:#eb595f; font-weight:bold; }
+#num:focus + #lab_num::after, #num:valid + #lab_num::after{ transform:translateX(0%); }
+
+/* WhatsApp checkbox row */
+.form div{ position:relative; text-align:left; width:100%; margin:25px 0 0 0; }  /* raised from 9px */
+#lab_chk{ margin:0 0 0 8px; font-size:30px; }
+input[type="checkbox"]{ width:30px; height:30px; cursor:pointer; }
+
+/* Submit button (kept your style) */
+#sub-btn{
+    margin:40px 0 0 0; padding:9px 16px; font-size:25px; background:#fff;
+    border:3px solid #eb595f; border-radius:25px; font-weight:bold; transition:.5s; cursor:pointer;
+}
+#sub-btn:hover{ color:#fff; background:#eb595f; }
+
+/* ======= OTHER SECTIONS (UNCHANGED) ======= */
+.m2{ padding:0 50px 50px; margin:0 0 150px 0; }
+.t2{ width:1175px; margin:auto; }
+.t2 h1{ font-size:45px; }
+.t2 p{ font-size:25px; }
+.d2{ width:1200px; height:90vh; margin:auto; display:flex; justify-content:space-evenly; }
+.d2 div{ text-align:center; width:375px; }

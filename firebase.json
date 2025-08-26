@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "MistriUrbania",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
