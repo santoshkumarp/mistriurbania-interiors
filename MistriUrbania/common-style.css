@@ -267,3 +267,67 @@ body{
     left: 20px;
     color: #eb595f;
 }
+/*Customised*/
+.circle-img {
+    width: 120px;       /* adjust size */
+    height: 120px;      /* keep it square */
+    border-radius: 50%; /* makes it circular */
+    object-fit: cover;  /* ensures it fills circle properly */
+    margin-bottom: 10px;
+    border: 3px solid #eb595f; /* optional nice border */
+}
+.review-card {
+    max-width: 400px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    align-items: flex-start;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.review-photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid #eb595f; /* accent color */
+}
+
+.review-content {
+    flex: 1;
+}
+
+.review-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.review-loc {
+    font-size: 14px;
+    color: #777;
+    margin: 2px 0 8px 0;
+}
+
+.review-stars {
+    color: #fbbc05; /* Google yellow stars */
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.5;
+    font-style: italic;
+}

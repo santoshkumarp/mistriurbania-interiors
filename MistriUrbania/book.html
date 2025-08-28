@@ -50,21 +50,24 @@
                     <label class="lab" id="lab_num" for="num">
                         <span class="spn" id="content-num">Mobile Number</span>
                     </label>
+
                     <!-- Looking For -->
-                    <input class="inp" id="looking" type="text" name="entry.839337160" placeholder=" " required>
-                    <label class="lab" for="looking"><span>Looking For...</span></label>
+                    <input class="inp" id="looking" type="text" name="entry.839337160" autocomplete="off" required>
+                    <label class="lab" for="looking">
+                        <span class="spn" id="content-prop">Looking For...</span>
+                    </label>
 
                     <!-- WhatsApp Checkbox -->
                     <div>
                         <input type="checkbox" id="whatsapp" name="entry.1961355601" value="Yes">
-                        <label id="lab_chk" for="whatsapp">Send me updates on WhatsApp</label>
+                        <label for="whatsapp">Send me updates on WhatsApp</label>
                     </div>
 
                     <!-- Submit -->
                     <button type="submit" id="sub-btn">BOOK ONLINE CONSULTATION</button>
                 </form>
 
-                <!-- Hidden iframe -->
+                <!-- Hidden iframe to suppress redirect -->
                 <iframe name="hidden_iframe" style="display:none;" onload="if(submitted) showThankYou();"></iframe>
 
             </div>
