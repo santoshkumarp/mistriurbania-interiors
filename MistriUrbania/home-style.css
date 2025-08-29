@@ -233,49 +233,52 @@ area{
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-    /* Section m1 and m4: Stack divs vertically */
-    .d1, .d4 {
-        flex-direction: column;
-        align-items: center;
-    }
+ .m1, .m4 {
+ flex-direction: column;
+ align-items: center;
+ }
 
-    .d1 div, .d4 div {
-        width: 80%; /* Adjust width for smaller screens */
-        margin-bottom: 20px; /* Add spacing between stacked divs */
-    }
+ .d1 div, .d4 div {
+ width: 80%;
+ margin-bottom: 20px;
+ }
 
-    /* Section m2 and m3: Stack divs vertically and center text */
-    .d2, .d3 {
-        flex-direction: column;
-        align-items: center;
-    }
+ .m2, .m3 {
+ flex-direction: column;
+ align-items: center;
+ }
 
-    .d2 div, .d3 div {
-        width: 90%; /* Adjust width for smaller screens */
-        text-align: center;
-        margin-bottom: 30px; /* Add spacing between stacked divs */
-    }
+ .d2 div, .d3 div {
+ width: 90%;
+ text-align: center;
+ margin-bottom: 30px;
+ }
 
-    .d2 div img, .d3 div img {
-        margin: 0 auto 20px auto; /* Center images */
-    }
+ .d2 div img, .d3 div img {
+ margin: 0 auto 20px auto;
+ }
 
-    .d2 div p, .d3 div p {
-        text-align: center;
-    }
+ .d2 div p, .d3 div p {
+ text-align: center;
+ }
 
-    /* Section m5: Stack divs vertically and increase width */
-    .d5 {
-        flex-direction: column;
-        align-items: center;
-    }
+ .m5 {
+ flex-direction: column;
+ align-items: center;
+ }
 
-    .d5 div {
-        width: 90%; /* Increase width */
-        margin-bottom: 30px; /* Add spacing between stacked divs */
-    }
+ .d5 div {
+ width: 90%;
+ margin-bottom: 30px;
+ }
 
-    /* Slider adjustments */
+ /* Ensure images scale down without losing quality */
+ img {
+ max-width: 100%;
+ height: auto;
+ }
+
+ /* Adjustments for the slider */
     .slider {
         width: 90%; /* Increase slider width */
         height: auto; /* Auto height */

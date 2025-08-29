@@ -45,18 +45,6 @@
     text-align: center;
     font-size: 35px;
 }
-@media screen and (max-width: 768px) {
- .m1 .d1,
- .m2 .d2 {
- display: flex;
- flex-direction: column;
- align-items: center;
- }
- .m1 .d1 div,
- .m2 .d2 div {
- width: 90%;
- }
-}
 
 
 
@@ -88,6 +76,20 @@
     text-decoration: none;
 }
 @media screen and (max-width: 768px) {
+ /* Section m1 and m2: Stack divs vertically and increase width */
+ .d1,
+ .d2 {
+ flex-direction: column;
+ align-items: center;
+ }
+
+ .d1 div,
+ .d2 div {
+ width: 90%; /* Increase width */
+ margin-bottom: 30px; /* Add spacing between stacked divs */
+ }
+
+ /* Adjust font sizes for smaller screens */
  .m1 .d1 div h2 {
  font-size: 28px;
  }
@@ -95,5 +97,6 @@
  font-size: 30px;
  }
  .m2 .d2 div p {
- font-size: 18px;
- }}
+ font-size: 18px; /* Reduced font size for paragraph in m2 */
+ }
+}
