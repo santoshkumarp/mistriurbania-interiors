@@ -331,3 +331,78 @@ body{
     line-height: 1.5;
     font-style: italic;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin: 10px 0;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .content {
+        width: 90%;
+        margin: 0 auto;
+        position: static;
+        transform: none;
+        padding-top: 20px;
+    }
+
+    .content h1 {
+        font-size: 40px;
+    }
+
+    .content p {
+        font-size: 16px;
+        width: 90%;
+    }
+
+    .last {
+        height: 300px;
+    }
+
+    .last div h1 {
+        font-size: 25px;
+    }
+
+    .last div button {
+        font-size: 18px;
+        width: 150px;
+        padding: 10px 0;
+    }
+
+    .ftr-m {
+        padding: 20px;
+    }
+
+    .ftr-t {
+        flex-direction: column;
+        align-items: center;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .ftr-t img {
+        width: 150px;
+        margin-bottom: 20px;
+    }
+
+    .ftr-d {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -22,7 +22,7 @@
     text-align: center;
 }
 .t1 p{
-    font-size: 30px;
+    font-size: 20px;
 }
 .d1{
     margin: 50px 0 0 0;
@@ -32,9 +32,11 @@
 }
 .d1 div{
     width: 550px;
+ margin: 0 auto 70px auto;
     border-radius: 10px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3), 0 1px 4px rgba(0, 0, 0, 0.3);
     overflow: hidden;
+ width: 90%;
     text-align: center;
     padding: 0 0 10px 0;
     margin: 0 0 70px 0;
@@ -48,11 +50,11 @@
 .d1 img:hover{
     transform: scale(1.05);
 }
-.d1 div h2{
+.d1 div h2 {
     margin: 20px 0 10px 0;
     text-align: center;
     font-size: 25px;
-}
+    font-size: 20px;
 .d1 div span{
     font-size: 25px;
 }
@@ -64,7 +66,7 @@
     padding: 10px;
     margin: 0 0 0 20px;
     border-radius: 15px;
-    font-weight: bold;
+ font-weight: bold;
     transition: .5s;
     bottom: 10px;
     right: 10px;

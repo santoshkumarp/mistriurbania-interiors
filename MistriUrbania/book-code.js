@@ -17,8 +17,10 @@ function frmsbm(){
                         alert('Mobile Number is incorrect');
                     }
                     else{
-                        document.getElementById('subm').style['display'] = 'block';
-                        document.getElementById('frm').style['display'] = 'none';
+ setTimeout(() => {
+ document.getElementById('subm').style.display = 'block';
+ document.getElementById('frm').style.display = 'none';
+ }, 50); // Small delay to allow layout reflow
                     }
                 }
                 else{

@@ -27,6 +27,7 @@
 .d1 div{
     width: 525px;
     height: 295.8px;
+
     border-radius: 10px;
     overflow: hidden;
 }
@@ -136,6 +137,7 @@
 }
 .m5 img{
     width: 800px;
+
     border-radius: 10px;
     cursor: pointer;
     /* filter: brightness(50%); */
@@ -162,6 +164,7 @@
 .slider{
     margin: auto;
     margin-top: 70px;
+
     margin-bottom: 100px;
     width: 600px;
     height: 375px;
@@ -171,8 +174,10 @@
 }
 .slide{
 width: 600px;
+
 height: 375px;
 display: flex;
+
 }
 .slide input{
 display: none;
@@ -182,7 +187,9 @@ transition: 2s;
 }
 .imgs img{
 width: 600px;
+
 height: 375px;
+
 }
 
 /* css for man slide */
@@ -190,6 +197,7 @@ height: 375px;
 color: #eb595f;
 position: absolute;
 width: 600px;
+
 margin-top: 337.5px;
 display: flex;
 justify-content: center;
@@ -262,3 +270,60 @@ background: #eb595f;
 #radio6:checked~ .nav_auto .auto-btn6{
 background: #eb595f;
 }
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .m1, .m2, .m4 {
+        padding: 20px;
+    }
+
+    .t1 h1, .t3 h1 {
+        font-size: 30px;
+    }
+
+    .t1 p, .t3 p {
+        font-size: 18px;
+    }
+
+    .d1, .d2, .d4 {
+        flex-direction: column;
+        align-items: center;
+        margin: 50px 0 0 0;
+    }
+
+    .d1 div, .d2 div, .d4 div {
+        width: 90%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .d1 div img, .d2 div img {
+        width: 100%;
+        height: auto;
+    }
+
+    .d1 div h1, .d2 div h1 {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    .d1 div p, .d2 div p {
+        font-size: 16px;
+    }
+
+    .d4 h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .d4 p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .m5 img {
+        width: 90%;
+    }
+}
+
+
