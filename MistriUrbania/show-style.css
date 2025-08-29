@@ -27,34 +27,38 @@
 .d1{
     margin: 50px 0 0 0;
     display: flex;
-    justify-content: space-evenly;
+ justify-content: center;
+    align-items: flex-start; /* Align items to the start to prevent stretching */
+ gap: 30px;
     flex-wrap: wrap;
 }
 .d1 div{
-    width: 550px;
- margin: 0 auto 70px auto;
+ width: 550px;
+ margin: 0 auto 70px auto; /* Keep margin for spacing between divs */
     border-radius: 10px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3), 0 1px 4px rgba(0, 0, 0, 0.3);
     overflow: hidden;
- width: 90%;
     text-align: center;
     padding: 0 0 10px 0;
-    margin: 0 0 70px 0;
+ margin: 0 auto 70px auto; /* Keep margin for spacing between divs and center */
 }
 .d1 div img{
     display: block;
-    width: inherit;
+    margin-bottom: 10px; /* Add space below the image */
+    width: 100%;
     transition: .5s;
-    cursor: pointer;
+ cursor: pointer;
 }
-.d1 img:hover{
+.d1 div:hover img {
+.d1 div:hover img{
     transform: scale(1.05);
 }
 .d1 div h2 {
-    margin: 20px 0 10px 0;
     text-align: center;
+ margin: 10px 0; /* Adjust margin for space above and below h2 */
     font-size: 25px;
-    font-size: 20px;
+
+}
 .d1 div span{
     font-size: 25px;
 }
