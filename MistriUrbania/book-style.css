@@ -56,6 +56,7 @@
     font-size: 50px;
     font-weight: bold;
     text-align: left;
+    position: relative;
 }
 #nam{
     margin-top: 27px;
@@ -75,18 +76,6 @@
     font-size: 35px;
     width: 100%;
     pointer-events: none;
-}
-#lab_nam{
-    top: 100px;
-}
-#lab_email{
-    top: 205px;
-}
-#lab_num{
-    top: 310px;
-}
-#lab_looking{
-    top: 415px;
 }
 .lab::after{
     content: "";
@@ -108,7 +97,7 @@
 }
 #nam:focus + #lab_nam #content-name,
 #nam:valid + #lab_nam #content-name{
-    transform: translateY(-120%);
+    transform: translateY(-150%);
     font-size: 30px;
     color: #eb595f;
     font-weight: bold;
@@ -119,7 +108,7 @@
 }
 #email:focus + #lab_email #content-email,
 #email:valid + #lab_email #content-email{
-    transform: translateY(-120%);
+    transform: translateY(-150%);
     font-size: 30px;
     color: #eb595f;
     font-weight: bold;
@@ -130,7 +119,7 @@
 }
 #num:focus + #lab_num #content-num,
 #num:valid + #lab_num #content-num{
-    transform: translateY(-120%);
+    transform: translateY(-150%);
     font-size: 30px;
     color: #eb595f;
     font-weight: bold;
@@ -141,7 +130,7 @@
 }
 #looking:focus + #lab_looking #content-looking,
 #looking:valid + #lab_looking #content-looking{
-    transform: translateY(-120%);
+    transform: translateY(-150%);
     font-size: 30px;
     color: #eb595f;
     font-weight: bold;
