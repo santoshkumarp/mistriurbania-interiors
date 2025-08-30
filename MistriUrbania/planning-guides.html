@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +11,9 @@
     <link rel="shortcut icon" href="MistriUrbania/source/favicon.ico" type="image/x-icon">
     <style>
         .planning-guides-container {
-            padding: 50px 20px;
-            max-width: 960px;
-            margin: 0 auto;
+            padding: 20px;
+            max-width: 900px;
+            margin: -60px auto 0;
         }
         .planning-guides-container h1 {
             text-align: center;
@@ -41,9 +42,32 @@
         .planning-guides-section ul li {
             margin-bottom: 10px;
         }
+        .navbar ul li a {
+            color: #000;
+        }
         @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .logo {
+                margin: 10px 0;
+            }
+
+            .navbar ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+            }
+
+            .navbar ul li {
+                margin: 10px 0;
+            }
             .planning-guides-container {
                 padding: 30px 15px;
+                margin-top: -40px;
             }
             .planning-guides-container h1 {
                 font-size: 30px;

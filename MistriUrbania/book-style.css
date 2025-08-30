@@ -66,8 +66,8 @@
 #num{
     margin-top: 27px;
 }
-#prop{
-    margin-top: 20px;
+#looking{
+    margin-top: 27px;
 }
 .lab{
     position: absolute;
@@ -75,7 +75,6 @@
     font-size: 35px;
     width: 100%;
     pointer-events: none;
-    border-bottom: 1px solid #eb595f;
 }
 #lab_nam{
     top: 100px;
@@ -84,10 +83,10 @@
     top: 205px;
 }
 #lab_num{
-    top: 305px;
+    top: 310px;
 }
-#lab_prop{
-    top: 460px;
+#lab_looking{
+    top: 415px;
 }
 .lab::after{
     content: "";
@@ -97,7 +96,8 @@
     height: 100%;
     width: 100%;
     border-bottom: 3px solid #eb595f;
-    transform: translateX(-100%);
+    transform: scaleX(0);
+    transform-origin: left;
     transition: transform 1s ease;
 }
 .spn{
@@ -115,7 +115,7 @@
 }
 #nam:focus + #lab_nam::after,
 #nam:valid + #lab_nam::after{
-    transform: translateX(0%);
+    transform: scaleX(1);
 }
 #email:focus + #lab_email #content-email,
 #email:valid + #lab_email #content-email{
@@ -126,7 +126,7 @@
 }
 #email:focus + #lab_email::after,
 #email:valid + #lab_email::after{
-    transform: translateX(0%);
+    transform: scaleX(1);
 }
 #num:focus + #lab_num #content-num,
 #num:valid + #lab_num #content-num{
@@ -137,18 +137,18 @@
 }
 #num:focus + #lab_num::after,
 #num:valid + #lab_num::after{
-    transform: translateX(0%);
+    transform: scaleX(1);
 }
-#prop:focus + #lab_prop #content-prop,
-#prop:valid + #lab_prop #content-prop{
+#looking:focus + #lab_looking #content-looking,
+#looking:valid + #lab_looking #content-looking{
     transform: translateY(-120%);
     font-size: 30px;
     color: #eb595f;
     font-weight: bold;
 }
-#prop:focus + #lab_prop::after,
-#prop:valid + #lab_prop::after{
-    transform: translateX(0%);
+#looking:focus + #lab_looking::after,
+#looking:valid + #lab_looking::after{
+    transform: scaleX(1);
 }
 .form div{
     position: relative;
@@ -447,8 +447,8 @@ input[type="checkbox"]{
         font-size: 20px;
     }
 
-    #prop:focus + #lab_prop #content-prop,
-    #prop:valid + #lab_prop #content-prop {
+    #looking:focus + #lab_looking #content-looking,
+    #looking:valid + #lab_looking #content-looking {
         font-size: 20px;
     }
 
