@@ -1,0 +1,63 @@
+.banner{
+    height: 50vh;
+}
+.navbar ul li a {
+    color: #eb595f;
+}
+.content h1 {
+    color: #eb595f;
+}
+.planning-guides-container {
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.planning-guides-container h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+.guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.guide-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+.guide-card:hover {
+    transform: translateY(-5px);
+}
+.guide-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.guide-card-content {
+    padding: 20px;
+}
+.guide-card-content h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.guide-card-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+.guide-card-content a {
+    text-decoration: none;
+    color: #eb595f;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    .planning-guides-container {
+        padding: 30px 15px;
+        margin-top: 0;
+    }
+}

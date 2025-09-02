@@ -1,46 +1,58 @@
-/* General form styling */
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(source/book-background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.m1 {
+    padding: 50px;
+}
+
+.d1 {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
 .form {
-    position: relative;
-    width: 750px;
-    height: auto; /* Changed from 600px to auto */
-    margin: 50px auto;
+    width: 100%;
     text-align: center;
 }
 
-/* Input field styling */
 .form-group {
     position: relative;
-    margin-bottom: 40px; /* Increased spacing between fields */
+    margin-bottom: 35px;
 }
 
 .inp {
     width: 100%;
-    color: black;
+    color: #333;
     border: none;
-    border-bottom: 2px solid #ccc; /* Added a default bottom border */
+    border-bottom: 2px solid #ccc;
     outline: none;
-    font-size: 24px; /* Unified font size */
-    font-weight: bold;
-    text-align: left;
-    padding: 10px 0;
+    font-size: 20px; /* Reduced font size */
+    padding: 8px 0;
     background-color: transparent;
 }
 
 .lab {
     position: absolute;
     left: 0;
-    top: 10px;
-    font-size: 24px;
+    top: 8px;
+    font-size: 20px; /* Reduced font size */
     color: #999;
     pointer-events: none;
     transition: all 0.3s ease;
 }
 
-/* Floating label and red line effect */
 .inp:focus + .lab,
 .inp:valid + .lab {
-    top: -20px;
-    font-size: 18px;
+    top: -18px;
+    font-size: 16px;
     color: #eb595f;
     font-weight: bold;
 }
@@ -58,62 +70,56 @@
     transition: transform 0.3s ease;
 }
 
-.inp:focus ~ .form-group::after,
-.inp:valid ~ .form-group::after {
+.form-group:focus-within::after {
     transform: scaleX(1);
 }
 
-/* Checkbox styling */
 .checkbox-group {
     text-align: left;
-    margin: 20px 0;
+    margin: 25px 0;
 }
 
 #whatsapp {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
+    width: 18px;
+    height: 18px;
     margin-right: 10px;
 }
 
 .checkbox-group label {
-    font-size: 18px;
+    font-size: 16px;
 }
 
-/* Submit button styling */
 #sub-btn {
-    margin-top: 30px;
-    padding: 12px 25px;
-    font-size: 22px;
-    background: white;
-    border: 3px solid #eb595f;
+    margin-top: 25px;
+    padding: 12px 30px;
+    font-size: 20px;
+    background: #eb595f;
+    color: white;
+    border: none;
     border-radius: 30px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.5s;
+    transition: background 0.3s ease;
 }
 
 #sub-btn:hover {
-    color: white;
-    background: #eb595f;
+    background: #d84a51;
 }
 
-/* Responsive adjustments */
+#subm {
+    display: none; /* Hidden by default */
+    text-align: center;
+    margin-top: 30px;
+    font-size: 22px;
+    color: #4CAF50;
+}
+
 @media (max-width: 768px) {
-    .form {
-        width: 90%;
+    .d1 {
+        padding: 30px;
     }
-
-    .inp, .lab {
-        font-size: 20px;
-    }
-
-    .inp:focus + .lab,
-    .inp:valid + .lab {
-        font-size: 16px;
-    }
-
-    #sub-btn {
+    
+    .inp, .lab, #sub-btn {
         font-size: 18px;
     }
 }

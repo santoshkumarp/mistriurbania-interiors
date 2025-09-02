@@ -1,41 +1,33 @@
-window.addEventListener('load' , () => {
-    const params = (new URL(document.location)).searchParams;
-    const nprop = params.get('name');
-    if (nprop != ''){
-        document.getElementById('prop').value = nprop;
-    }
-})
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form');
+    const thankYouMessage = document.getElementById('subm');
+    const formContainer = document.getElementById('frm');
 
+    // Hide the thank-you message initially
+    thankYouMessage.style.display = 'none';
 
-function frmsbm(){
-    num_val = document.getElementById('num').value
-    if (document.getElementById('email').value.includes('@')){
-        if (document.getElementById('email').value.includes('.')){
-            if (num_val.length == 10){
-                if(num_val.slice(0, 1) >= 7 && num_val.slice(0, 1) <=9 ){
-                    if(isNaN(num_val)){
-                        alert('Mobile Number is incorrect');
-                    }
-                    else{
- setTimeout(() => {
- document.getElementById('subm').style.display = 'block';
- document.getElementById('frm').style.display = 'none';
- }, 50); // Small delay to allow layout reflow
-                    }
-                }
-                else{
-                    alert('Mobile Number is incorrect');
-                }
-            }
-            else{
-                alert('Mobile Number is incorrect');
-            }
+    form.addEventListener('submit', (e) => {
+        e.preventDefault(); // Prevent the default form submission
+
+        // Basic validation (you can add more)
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('num').value;
+
+        if (!email.includes('@') || !email.includes('.')) {
+            alert('Please enter a valid email address.');
+            return;
         }
-        else{
-            alert('Email Address is incorrect');
+
+        if (!/^[7-9][0-9]{9}$/.test(phone)) {
+            alert('Please enter a valid 10-digit mobile number.');
+            return;
         }
-    }
-    else{
-        alert('Email Address is incorrect');
-    }
-}
+
+        // If validation passes, show thank-you message and hide the form
+        formContainer.style.display = 'none';
+        thankYouMessage.style.display = 'block';
+
+        // Optional: You can still submit to Google Forms via the iframe
+        e.target.submit();
+    });
+});

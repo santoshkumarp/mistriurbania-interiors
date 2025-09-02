@@ -292,6 +292,18 @@ area{
         grid-template-columns: 1fr;
     }
 
+    .review-card {
+        padding: 15px;
+    }
+
+    .review-name {
+        font-size: 18px;
+    }
+
+    .review-text {
+        font-size: 14px;
+    }
+
  /* Ensure images scale down without losing quality */
  img {
  max-width: 100%;
